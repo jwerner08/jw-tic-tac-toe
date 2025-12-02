@@ -1,0 +1,58 @@
+# -----------------------------
+# Ruff Configuration
+# -----------------------------
+
+# Target Python version
+target-version = "py314"
+
+# Line length compatible with formatter
+line-length = 88
+
+# Exclude directories
+exclude = [".venv", "venv", "build", "dist", "__pycache__", "*.egg-info"]
+
+# Which rules to enable
+lint.select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "I",   # import sorting
+  "W",   # pycodestyle warnings
+  "C90", # mccabe complexity
+  "B",   # flake8-bugbear
+  "UP",  # pyupgrade
+  "N",   # pep8-naming
+  "PT",  # pytest-style (future-proof even if you add tests later)
+  "RUF", # Ruff-specific rules
+]
+
+# Which rules to ignore (balanced for a real project)
+lint.ignore = [
+  "E501", # line length (handled by formatter)
+  "N802", # allow mixedCase function names if needed
+  "N803", # allow non-snake-case args (sqlalchemy columns often map to names)
+]
+
+# isort-style import sorting via Ruff
+[lint.isort]
+combine-as-imports = true
+force-single-line = false
+
+# Avoid rewriting multiline SQL strings or manually formatted blocks
+[lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+
+# Maximum cyclomatic complexity before flagging
+[lint.mccabe]
+max-complexity = 10
+
+# Per-file ignores — reduce noise for common patterns
+[lint.per-file-ignores]
+"tests/*" = ["S101"]                      # allow assert in tests
+"migrations/*" = ["N805", "N803", "E501"] # ORM migrations get weird
+
+# Formatter behavior
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

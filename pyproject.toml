@@ -1,0 +1,14 @@
+[project]
+name = "jw-tic-tac-toe"
+version = "0.1.0"
+description = "A python application for Tic Tac Toe."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "psycopg2-binary>=2.9.11",
+  "python-dotenv>=1.2.1",
+  "sqlalchemy>=2.0.44",
+]
+
+[dependency-groups]
+dev = ["pre-commit>=4.5.0", "ruff>=0.14.7"]
