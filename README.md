@@ -2,7 +2,15 @@
 
 A Python-based tic-tac-toe game with a PostgreSQL backend, focused on good developer experience and data modeling. To run it, see the Setup section below.
 
-My approach was to treat even a simple game as a chance to showcase how I structure real projects: modern Python packaging with uv, linting/formatting, and a container-friendly setup, with particular emphasis on the database layer. The data model is designed so games can be saved mid-play, resumed later, and eventually analyzed for strategy and player stats. I used AI coding assistants (like ChatGPT and Openhands) mainly for boilerplate generation. With more time, I’d review the ai code more in depth, add richer analytics (per-player performance, opening patterns), expand automated tests, and polish some of the rough edges around configuration and error handle
+My approach was to treat even a simple game as a chance to showcase how I structure real projects: modern Python packaging with uv, linting/formatting, and a container-friendly setup, with particular emphasis on the database layer. The data model is designed so games can be saved mid-play, resumed later, and eventually analyzed for strategy and player stats. I used AI coding assistants (like ChatGPT and Openhands) mainly for boilerplate generation. Under a longer time constraint I would have liked to review more of the AI code that was generated in [this PR](https://github.com/jwerner08/jw-tic-tac-toe/pull/1), and I would have liked to add these things:
+
+- Pytest as the testing framework
+- Adopt a traditional `src/` file/directory layout.
+- Add Github Actions for CICD.
+- Dockerize the app
+- Add feature to have player accounts.
+- Add feature for more analytics (leaderboard, personal stats, etc.)
+- Add feature for playing against AI.
 
 ## Prerequisites
 
