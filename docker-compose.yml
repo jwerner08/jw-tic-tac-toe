@@ -6,13 +6,13 @@ services:
     ports:
       - "54321:5432"
     environment:
-      POSTGRES_USER: app_user
-      POSTGRES_PASSWORD: app_password
-      POSTGRES_DB: app_db
+      POSTGRES_USER: tic
+      POSTGRES_PASSWORD: tac
+      POSTGRES_DB: tic-tac-toe
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U app_user -d app_db"]
+      test: ["CMD-SHELL", "pg_isready -U tic -d tic-tac-toe"]
       interval: 5s
       timeout: 5s
       retries: 5
