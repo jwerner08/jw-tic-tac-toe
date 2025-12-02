@@ -1,6 +1,6 @@
 # Tic-Tac-Toe Game
 
-A Python-based tic-tac-toe game with a PostgreSQL backend, focused on good developer experience and data modeling. To run it, see the Setup section below.
+A Python-based tic-tac-toe game with a PostgreSQL backend, focused on good developer experience and data modeling. To run it, see the[ Setup section](https://github.com/jwerner08/jw-tic-tac-toe?tab=readme-ov-file#setup) below.
 
 My approach was to treat even a simple game as a chance to showcase how I structure real projects: modern Python packaging with uv, linting/formatting, and a container-friendly setup, with particular emphasis on the database layer. The data model is designed so games can be saved mid-play, resumed later, and eventually analyzed for strategy and player stats. I used AI coding assistants (like ChatGPT and Openhands) mainly for boilerplate generation. Under a longer time constraint I would have liked to review more of the AI code that was generated in [this PR](https://github.com/jwerner08/jw-tic-tac-toe/pull/1), and I would have liked to add these things:
 
