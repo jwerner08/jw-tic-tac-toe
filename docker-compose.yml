@@ -8,11 +8,11 @@ services:
     environment:
       POSTGRES_USER: tic
       POSTGRES_PASSWORD: tac
-      POSTGRES_DB: tic-tac-toe
+      POSTGRES_DB: tic_tac_toe
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U tic -d tic-tac-toe"]
+      test: ["CMD-SHELL", "pg_isready -U tic -d tic_tac_toe"]
       interval: 5s
       timeout: 5s
       retries: 5
